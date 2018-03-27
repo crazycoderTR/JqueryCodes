@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <span>Ad: </span>
+        <input type="text" class="control">
+    </p>
+    <p>
+        <span>Hobiler: </span>
+        <select class="control">
+            <option value="spor" selected="selected">Spor Yapmak</option>
+            <option value="sinema">Sinema</option>
+        </select>
+    </p>
+    
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            $(".control").change(function(){
+                var deger = $(this).val();
+                alert(deger + " seçildi");
+            });
+        });
+    </script>
+
+</body>
+</html>

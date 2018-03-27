@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            position: absolute;
+            left:10px;
+            top:200px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Full Stack Web Developer</h1>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="animate">Animate</button>
+
+    <div id="box">Mesut KILINCASLAN</div>
+    
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#hide").click(function(){
+                $("h1").hide();
+            });
+            $("#show").click(function(){
+                $("h1").show();
+            });
+            $("#toggle").click(function(){
+                $("h1").toggle("slow",function(){
+                    alert("paragraf animasyon");
+                });
+            });
+            $("#slideup").click(function(){
+                $("h1").slideUp();
+            });
+            $("#slidedown").click(function(){
+                $("h1").slideDown();
+            });
+            $("#fadein").click(function(){
+                $("h1").fadeIn("slow");
+            });
+            $("#fadeout").click(function(){
+                $("h1").fadeOut("slow");
+            });
+
+            $("#animate").click(function(){
+                var box = $("#box");
+                box.animate({
+                    left:'750px',
+                    width:'500px',
+                    height:'400px',
+                    fontSize:'30px'
+            },2000);
+            });
+        });
+    </script>
+
+</body>
+</html>

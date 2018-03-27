@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .paragragrenklendir{
+            color:red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Full</p>
+    <p id="p2">Stack</p>
+    <p class="paragraf">Web</p>
+    <p class="paragraf">Developer</p>
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            console.log("ready");
+        });
+        $(function(){
+            console.log("ready");
+        });
+        $(function(){
+            $("#p1").click(function(){
+                alert("You clicked full");
+            });
+            $("#p2").click(function(){
+                alert("You clicked stack");
+            });
+            $(".paragraf").click(function(){
+                alert("You clicked web or developer");
+                $(this).addClass("paragragrenklendir");
+            });
+        });
+    </script>
+    
+</body>
+</html>

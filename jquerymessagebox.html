@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#header").click(function(){
+                $("#content").toggle("slow");
+            });
+            $("#kapat").click(function(){
+                $("#messagebox").hide(2500);
+            });
+        });
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #messagebox{
+            background-color: forestgreen;
+            text-align: center;
+            color:#fff;
+        }
+        #header{
+            cursor: pointer;
+            height: 25px;
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+        }
+        #content{
+            height: 200px;
+            padding: 10px;
+            display: none;
+        }
+        #kapat{
+            cursor: pointer;
+            height: 25px;
+            width:50px;
+            display: inline-block;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="messagebox">
+        <div id="header">
+            <span>Mesajınız Var</span>
+            <span id="kapat">X</span>
+        </div>
+        <div id="content"></div>
+    </div>
+</body>
+</html>

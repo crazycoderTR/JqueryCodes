@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Jquery Dersleri <small>Selectors</small></h3>
+    <div id="container">
+        <ul id="liste">
+            <li id="first">Jquery Reference</li>
+            <li>Selectors</li>
+            <li>Jquery Plugins</li>
+        </ul>
+    </div>
+
+    <div>
+        <input id="ad" type="text" placeholder="Adınız">
+        <input id="soyAd" type="text" placeholder="Soyad">
+        <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+    </div>
+
+    <ul class="bilgi">
+        <li id="addonder"></li>
+        <li id="soyaddonder"></li>
+    </ul>
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("first").style.color="red";
+    
+        console.log($("#liste"));
+    
+        var styles = {
+            backgroundColor:"#dddddd",
+            fontSize:"20px"
+        };
+        $("#container").css(styles);
+    
+        var listeler = document.querySelectorAll("li");
+        for (var i = 0; i < listeler.length;i++){
+            listeler[i].style.color = "red";   
+        };
+    
+        function adsoyad(){
+            var ad = $("#ad").val();
+            var soyad = $("#soyAd").val();
+            $("#addonder").text("Adınız: " + ad);
+            $("#soyaddonder").text("Soyadınız: " + soyad);
+            console.log("Adınız Soyadınız: " + ad + " " + soyad)
+        };
+
+        var styles1 = {
+            color:"black",
+            fontSize:"18px",
+            listStyleType:"none"
+        };
+        $(".bilgi").css(styles1)
+        $("addonder").css({
+            color:"black",
+            fontSize:"18px"
+        });
+        $("soyaddonder").css({
+            color:"black",
+            fontSize:"18px"
+        });
+
+        $("#container").attr("width","150px");
+    </script>
+</body>
+</html>
