@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <style>
+        .dogru{
+            color: green;
+        }
+        .yanlis{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text method trial</h1>
+    <ul>
+        <li></li>
+    </ul>
+    <input type="text" placeholder="Name">
+    <img src="https://cdn.pixabay.com/photo/2018/10/22/13/20/boat-3765324__340.jpg">
+    <img src="https://cdn.pixabay.com/photo/2018/09/30/19/03/metro-3714290__340.jpg">
+    <img src="https://cdn.pixabay.com/photo/2018/10/19/20/51/walnut-3759573__340.jpg">
+    <script>
+      $("h1").text(); //Show codes
+      $("h1").text("Content changed"); //Content change code
+      $("ul").html("<h1>Test</h1>"); //Modifies the html code
+      $("img").attr("src"); //Text to src attr
+      //$("img").attr("src", "https://cdn.pixabay.com/photo/2018/10/14/12/16/lago-federa-3746335__340.jpg"); //Modifies the src attr
+      $("img:first-of-type").attr("width","400px");
+      $("img").first().attr("width","200px");
+      $("img:last-of-type").attr("width","300px");
+      $("input").val(); //Text to value
+      $("input").val("crazycoder"); //Modifies the value
+      $("h1").addClass("dogru"); //Adding Class
+      $("h1").removeClass("yanlis"); //Removing Class
+      $("h1").toggleClass("dogru"); //Erases if any have class, adds a class if any don't have a class 
+    </script>
+</body>
+</html>
+
